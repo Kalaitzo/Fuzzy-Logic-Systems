@@ -11,10 +11,14 @@ Two different scenarios of fuzzy systems
 The output is the danger of that disease through time.
 <br>
 There are four outputs for the fuzzy system:
-->NONE<br>
-->LOW<br>
-->MEDIUM<br>
-->HIGH
+<br>
+1)--->NONE
+<br>
+2)--->LOW
+<br>
+3)--->MEDIUM
+<br>
+4)--->HIGH
 
 /--------------------------------------------------------/
 
