@@ -1,0 +1,41 @@
+[System]
+Name='danger'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=4
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='cases'
+Range=[0 1]
+NumMFs=2
+MF1='small':'gaussmf',[0.25 0]
+MF2='high':'gaussmf',[0.4247 1]
+
+[Input2]
+Name='healthy'
+Range=[0 1]
+NumMFs=2
+MF1='a_few':'gaussmf',[0.4 0]
+MF2='many':'gaussmf',[0.4 1]
+
+[Output1]
+Name='danger'
+Range=[0 1]
+NumMFs=4
+MF1='NONE':'trimf',[-0.3333 0 0.3333]
+MF2='LOW':'trimf',[-0.2 0.3333 0.6667]
+MF3='MEDIUM':'trimf',[0.3333 0.6667 1]
+MF4='EXTREME':'trimf',[0.6667 1 1.333]
+
+[Rules]
+1 2, 1 (1) : 1
+1 1, 2 (1) : 1
+2 2, 3 (1) : 1
+2 1, 4 (1) : 1
