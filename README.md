@@ -1,4 +1,4 @@
-# Fuzzy Logic Systems(3rd Assignment)
+# Fuzzy Logic Systems
 
 Two different applications of fuzzy systems
 
